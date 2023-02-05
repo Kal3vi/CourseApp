@@ -1,4 +1,4 @@
-package com.example.courseapp
+package com.example.courseapp.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember

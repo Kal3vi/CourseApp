@@ -3,8 +3,6 @@ package com.example.courseapp.ui
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.courseapp.MobileCompAppState
-import com.example.courseapp.rememberMobileCompAppState
 import com.example.courseapp.ui.home.Home
 import com.example.courseapp.ui.payment.Payment
 import com.example.courseapp.ui.login.Login
@@ -21,7 +19,9 @@ fun MobileCompApp(
             Login(navController = appState.navController)
         }
         composable(route = "home") {
-            Home()
+            Home(
+                navController = appState.navController
+            )
         }
         composable(route = "payment") {
             Payment(onBackPress = appState::navigateBack)
